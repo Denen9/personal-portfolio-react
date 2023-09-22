@@ -1,0 +1,79 @@
+.heroBox{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 4rem 0 4rem 0;
+ height: 100vh;
+}
+
+.titleBox{
+    width: 600px;
+    margin-bottom: 4rem;
+}
+
+.titleOne{
+    color: var(--color-gray);
+    font-weight: 200;
+    font-size: 4rem;
+    line-height: 150%;
+}
+
+.titleOneContainer{
+    display: inline-block;
+}
+
+.titleTwo{
+    color: var(--color-active);
+    font-size: 5rem;
+    font-weight: 000;
+    margin-left: 1rem;
+    
+}
+
+@media screen and (max-width: 1024px){
+    .heroBox{
+        padding: 4rem 0 4rem 0;
+        height: 40rem;
+       }
+       
+       .titleBox{
+           width: 450px;
+           margin-bottom: 4rem;       
+       }
+       
+       .titleOne{
+           font-size: 3rem;
+       }
+       
+       .titleTwo{
+           font-size: 4rem;
+       }
+}
+
+@media screen and (max-width: 576px){
+    .heroBox{
+        padding: 2rem 0 2rem 0;
+        height: 35rem;
+       }
+       
+       .titleBox{
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0;
+            margin-bottom: 1rem;
+          
+       }
+       
+       .titleOne{
+            font-size: 2.5rem;
+            line-height: 125%;    
+       }
+       
+       .titleTwo{
+           font-size: 2.5rem;
+           line-height: 125%;
+           margin-left: 0;
+       }
+}

@@ -1,0 +1,86 @@
+.cardBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    max-width: 1330px;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.cardBox:hover{
+    box-shadow: 0px 0px 30px 10px var(--color-active);}
+
+.cardImgBox{
+    width: 100%;
+    height: 12rem;
+    z-index: 20;
+}
+
+.cardImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+}
+
+.cardInfoBox{
+    color: var(--color-gray);
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 2rem;
+}
+
+.cardInfoTitle{
+    color: var(--color-active);
+    margin-bottom: .5rem;
+}
+
+.cardInfoText{
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+.projectsCardIcons{
+    display: flex;
+}
+
+.cardGetContainer{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 2rem;
+    border-top: 3px solid var(--color-active);
+}
+
+
+@media screen and (max-width: 768px){
+    .cardBox{
+        margin-bottom: 4rem;
+    }
+    
+    .cardInfoBox{
+        z-index: 30;
+        padding: 1rem 1rem;
+    }
+    
+    .cardInfoText{
+        line-height: 125%;
+        font-weight: 200;
+    }
+    
+}
+
+@media screen and (max-width: 576px){
+    
+    .cardInfoBox{
+        z-index: 30;
+    }
+    
+    .cardInfoText{
+        font-weight: 200;
+    }
+    
+}
