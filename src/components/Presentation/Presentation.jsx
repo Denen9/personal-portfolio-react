@@ -1,6 +1,7 @@
 import React from "react";
 import Plx from "react-plx";
 import "./Presentation.css";
+import image from "../../assets/Images/Me.webp"
 
 function Presentation() {
   return (
@@ -34,7 +35,7 @@ function Presentation() {
             zIndex: -1
           }}
         >
-          <img className="imgBox__img" src="/Images/Me.webp" alt="Me" />
+          <img className="imgBox__img" src={image} alt="Me" />
         </Plx>
       </div>
       <div className="informationBox">

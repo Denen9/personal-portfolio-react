@@ -1,7 +1,7 @@
-import image1 from "../public/Images/projects/Portfolio-react.png"
-import image2 from "../public/Images/projects/AluraGeek.png"
-import image3 from "../public/Images/projects/Encriptador-de-texto.png"
-import image4 from "../public/Images/projects//Portfolio-css-html-js.png"
+import image1 from "../src/assets/Images/projects/Portfolio-react.png"
+import image2 from "../src/assets/Images/projects/AluraGeek.png"
+import image3 from "../src/assets/Images/projects/Encriptador-de-texto.png"
+import image4 from "../src/assets/Images/projects/Portfolio-css-html-js.png"
 
 
 
