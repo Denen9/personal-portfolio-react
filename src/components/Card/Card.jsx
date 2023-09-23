@@ -1,9 +1,10 @@
 import React from "react";
 import "./Card.css";
 import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3 } from 'react-icons/bi';
-import { FaGithubSquare } from 'react-icons/fa'
+import { FiGithub } from 'react-icons/fi'
 import { GoLinkExternal } from 'react-icons/go'
 import Plx from "react-plx";
+import { Link } from "react-router-dom";
 
 function Card({ project }) {
     return (
@@ -51,7 +52,8 @@ function Card({ project }) {
                         </span>
                     ))}
                     <div className="cardGetContainer">
-                        <FaGithubSquare className="projectsGet"/><GoLinkExternal className="projectsGet"/>
+                        <Link to={project.github} className="link"><FiGithub className="projectsGet"/></Link>
+                        <Link to={project.url} className="link"><GoLinkExternal className="projectsGet"/></Link>
                     </div>
                 </div>
                 

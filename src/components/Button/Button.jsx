@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.css"
 
-function Button({children}){
+const Button = ({children}) =>{
     return(
         <button className="button">{children}
             <span className="buttonSpan b1"></span>

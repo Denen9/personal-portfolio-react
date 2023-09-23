@@ -55,6 +55,10 @@
     border-top: 3px solid var(--color-active);
 }
 
+.link{
+    text-decoration: none;
+}
+
 
 @media screen and (max-width: 768px){
     .cardBox{

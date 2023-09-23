@@ -9,12 +9,10 @@
     
 }
 
-
-
 .navbar {
     margin: 0 6rem;
     display: flex;
-    
+
 }
 
 .navbar__ul {
@@ -29,10 +27,15 @@
     cursor: pointer;
     color: var(--color-gray);
     font-weight: 400;
-    text-decoration: none;
     transition: .2s;
+    text-decoration: none;
+
 }
 
+.link{
+    position: relative;
+    text-decoration: none;
+}
 .navbar__ul-li:hover{
     color: var(--color-active);
 }

@@ -1,5 +1,5 @@
 .button {
-    color: var(--color-active);
+    color: var(--color-white);
     outline: none;
     border: none;
     font-size: 17px;
@@ -7,7 +7,7 @@
     position: relative;
     background: none;
     cursor: pointer;
-    z-index: 100;
+    z-index: 400;
   }
   
   .button:active {

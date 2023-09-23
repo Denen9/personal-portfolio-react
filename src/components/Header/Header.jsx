@@ -42,8 +42,8 @@ function Header() {
             <header className={`header ${scrolled ? "scrolled" : ""}`}>
                 <nav className="navbar">
                     <ul className="navbar__ul">
-                        <Link to="/"  onClick={scrollToTop}><li className="navbar__ul-li">HOME</li></Link>
-                        <Link to="/projects"  onClick={scrollToTop}><li className="navbar__ul-li">PROYECTOS</li></Link>
+                        <Link to="/"  onClick={scrollToTop} className="link"><li className="navbar__ul-li">HOME</li></Link>
+                        <Link to="/projects"  onClick={scrollToTop} className="link"><li className="navbar__ul-li">PROYECTOS</li></Link>
                         <li className="navbar__ul-li">SOBRE MI</li>
                         <li className="navbar__ul-li">CONTACTO</li>
                     </ul>
@@ -57,10 +57,10 @@ function Header() {
     
                 {toggleNavbar && (
                     <motion.nav
-                        initial={{ y: "-100%", opacity: 0 }} // Posición inicial y opacidad
-                        animate={{ y: 0, opacity: 1 }} // Posición final y opacidad al aparecer
-                        exit={{ y: "100%", opacity: 0 }} // Posición y opacidad al salir
-                        transition={{ duration: 0.3 }} // Duración de la animación
+                        initial={{ y: "-100%", opacity: 0 }} 
+                        animate={{ y: 0, opacity: 1 }} 
+                        exit={{ y: "100%", opacity: 0 }} 
+                        transition={{ duration: 0.3 }}
                         className="toggleNavbar"
                     >
                     {toggleNavbar && (

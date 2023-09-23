@@ -1,8 +1,11 @@
+import React from "react";
 import "./Hero.css"
-import Button from "../Button/Button";
 import { motion } from "framer-motion";
+import Button from "../Button/Button";
+
 
 function Hero() {
+
     return (
         
         <section className="heroBox">

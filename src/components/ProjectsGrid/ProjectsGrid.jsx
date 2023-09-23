@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./ProjectsGrid.css"
 import { motion } from "framer-motion";
 import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3 } from 'react-icons/bi'
-import { FaGithubSquare } from 'react-icons/fa'
+import { FiGithub } from 'react-icons/fi'
 import { GoLinkExternal } from 'react-icons/go'
+import { Link } from "react-router-dom";
 
 function ProjectsGrid({projects}){
     const [activeProject, setActiveProject] = useState(null);
@@ -51,7 +52,8 @@ function ProjectsGrid({projects}){
                         ))}
                     </div>
                     <div className="projectGetContainer">
-                        <FaGithubSquare className="projectsGet"/><GoLinkExternal className="projectsGet"/>
+                        <Link to={project.github} className="link"><FiGithub className="projectsGet"/></Link>
+                        <Link to={project.url} className="link"><GoLinkExternal className="projectsGet"/></Link>
                     </div>
                 </motion.div>
             )}
