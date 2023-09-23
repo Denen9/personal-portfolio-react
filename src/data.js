@@ -1,4 +1,4 @@
-import image1 from "../src/assets/Images/projects/Portfolio-react.png"
+import image1 from "../src/assets/Images/Me.webp"
 import image2 from "../src/assets/Images/projects/AluraGeek.png"
 import image3 from "../src/assets/Images/projects/Encriptador-de-texto.png"
 import image4 from "../src/assets/Images/projects/Portfolio-css-html-js.png"
