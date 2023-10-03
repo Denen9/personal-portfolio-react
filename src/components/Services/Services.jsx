@@ -33,7 +33,7 @@ const Services = () => {
           '--swiper-navigation-color': '#d316c8',
           '--swiper-pagination-color': '#fff',
         }}
-        speed={1400}
+        speed={800}
         parallax={true}
         pagination={false}
         navigation={true}

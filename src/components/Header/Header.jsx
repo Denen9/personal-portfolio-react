@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 function Header() {
     const [toggleNavbar, setToggleNavbar] = useState(false);
     const [showCloseButton, setShowCloseButton] = useState(false);
-    const [scrolled, setScrolled] = useState(false); // Estado para controlar si se hizo scroll
+    const [scrolled, setScrolled] = useState(false);
 
 
     const handleToggleNavbar = () => {

@@ -29,7 +29,6 @@ function ProjectsGrid({projects}){
                     className="projectImg"
                     onMouseOver={() => handleToggleInfo(project.id)}
                     />
-                {/* Si el valor de activeProject es igual a la id del proyecto entonces se muestra*/ }
                 {activeProject === project.id && (
                 <motion.div
                     className="projectInfo"
