@@ -22,6 +22,7 @@
     grid-row: span 2;
     position: relative;
     z-index: 100;
+    color: var(--color-gray);
   }
   
   .box3 {
@@ -30,6 +31,7 @@
     font-size: 0.85rem;
     position: relative;
     z-index: 100;
+    color: var(--color-gray);
   
   }
   
@@ -84,7 +86,7 @@
     transition: .5s;
     border-top: 3px solid var(--color-active);
     padding-top: .5rem;
-    cursor: pointer;
+   
   }
   
   .projectInfo__text{
@@ -109,10 +111,6 @@
     color: var(--color-active);
   }
   
-  
-  .projectInfoIcons:hover{
-    color: var(--color-active);
-  }
 
   @media screen and (max-width: 1024px){
     .projectsBox {

@@ -7,14 +7,13 @@ import { GoLinkExternal } from 'react-icons/go'
 import { Link } from "react-router-dom";
 
 function ProjectsGrid({projects}){
-    const [activeProject, setActiveProject] = useState(null);
+    // Inicializa el estado de activeProject con el id del primer proyecto
+    const [activeProject, setActiveProject] = useState(projects[0].id);
   
-
     // Función para alternar la visibilidad de la información del proyecto
     const handleToggleInfo = (id) => {
       setActiveProject(activeProject === id ? null : id);
     };
-
       
     // Limita la lista de proyectos a mostrar a los primeros 4
     const limitedProjects = projects.slice(0, 4);
@@ -35,7 +34,7 @@ function ProjectsGrid({projects}){
                     initial={{ opacity: 0 }}
                     animate={{
                         opacity: activeProject === project.id ? 1 : 0,
-                        transition: { duration: 0.5 },
+                        transition: { duration: 0.2 },
                     }}
                 >
                     <h4>{project.name}</h4>
