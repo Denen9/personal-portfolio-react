@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css"
 import { motion } from "framer-motion";
 import Button from "../Button/Button";
+import { BsChevronCompactDown } from "react-icons/bs";
 
 
 function Hero() {
@@ -18,7 +19,7 @@ function Hero() {
                 <span className="titleOne">Hola! Soy</span>
                 <b className="titleTwo">DENEN, FRONT END DEVELOPER</b>
             </motion.div>
-            <Button>EMPEZAR</Button>
+            <div className="heroIcon"><BsChevronCompactDown className="heroIcon"></BsChevronCompactDown></div>
         </section>
     );
 }

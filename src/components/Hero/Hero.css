@@ -35,6 +35,28 @@
     z-index: 200;
 }
 
+.heroIcon {
+    color: var(--color-gray);
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 1s;
+    animation: scaleAnimation 1s alternate infinite;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 1024px){
     .heroBox{
         padding: 4rem 0 4rem 0;

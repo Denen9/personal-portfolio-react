@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import "./ProjectsGrid.css"
 import { motion } from "framer-motion";
 import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3 } from 'react-icons/bi'
@@ -7,18 +7,18 @@ import { GoLinkExternal } from 'react-icons/go'
 import { Link } from "react-router-dom";
 
 function ProjectsGrid({projects}){
-    // Inicializa el estado de activeProject con el id del primer proyecto
-    const [activeProject, setActiveProject] = useState(projects[0].id);
+
+    
+    const [activeProject, setActiveProject] = useState(null);
   
-    // Función para alternar la visibilidad de la información del proyecto
     const handleToggleInfo = (id) => {
       setActiveProject(activeProject === id ? null : id);
     };
-      
-    // Limita la lista de proyectos a mostrar a los primeros 4
-    const limitedProjects = projects.slice(0, 4);
 
+    const limitedProjects = projects.slice(0, 4);
+    console.log(projects[0])
     return (
+        <Suspense fallback={<h1>Loading...</h1>}>
         <div className="projectsBox">
         {limitedProjects.map((project) => (
             <div className={`box box${project.id}`} key={project.id}>
@@ -26,15 +26,15 @@ function ProjectsGrid({projects}){
                     src={project.image}
                     alt={project.name}
                     className="projectImg"
-                    onMouseOver={() => handleToggleInfo(project.id)}
+                    onMouseOver={() => handleToggleInfo(project.name)}
                     />
-                {activeProject === project.id && (
+                {activeProject === project.name && (
                 <motion.div
                     className="projectInfo"
                     initial={{ opacity: 0 }}
                     animate={{
-                        opacity: activeProject === project.id ? 1 : 0,
-                        transition: { duration: 0.2 },
+                        opacity: activeProject === project.name ? 1 : 0,
+                        transition: { duration: 0.5 },
                     }}
                 >
                     <h4>{project.name}</h4>
@@ -59,6 +59,7 @@ function ProjectsGrid({projects}){
     ))}
 
     </div>
+    </Suspense>
     )
 }
 

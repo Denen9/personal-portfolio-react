@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ProjectsGrid from "../ProjectsGrid/ProjectsGrid";
 
 
-function ProjectsSection({ projects }) {
+function ProjectsSection({projects}) {
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);

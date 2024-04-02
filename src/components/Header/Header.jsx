@@ -57,18 +57,16 @@ function Header() {
     
                 {toggleNavbar && (
                     <motion.nav
-                        initial={{ y: "-100%", opacity: 0 }} 
-                        animate={{ y: 0, opacity: 1 }} 
+                        initial={{ x: "100%", opacity: 0 }} 
+                        animate={{ x: 0, opacity: 1 }} 
                         exit={{ y: "100%", opacity: 0 }} 
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.5 }}
                         className="toggleNavbar"
                     >
-                    {toggleNavbar && (
                         <AiOutlineClose
                             className="closeNavbar__button"
                             onClick={handleCloseNavbar}
                         />
-                        )}
                         <ul className="toggleNavbar__ul">
                             <Link to="/" className="toggleNavbar__ul-li">HOME</Link>
                             <Link to="/projects" className="toggleNavbar__ul-li">PROYECTOS</Link>

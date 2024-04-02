@@ -43,7 +43,7 @@
 .toggleNavbar{
     display: none;
     background-color: var(--color-primary);
-    filter: opacity(0.98);
+    filter: opacity(0.99);
     z-index: 1000;
 }
 .toggleNavbar__button{

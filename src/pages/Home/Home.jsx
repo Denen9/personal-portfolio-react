@@ -4,13 +4,13 @@ import Presentation from "../../components/Presentation/Presentation";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import Services from "../../components/Services/Services";
 
-function Home({projects}){
+function Home({projects, services}){
     return (
         <>
             <Hero />
             <Presentation />
             <ProjectsSection projects={projects}/>
-            <Services />
+            <Services services={services}/>
         </>
     )
 }
