@@ -1,7 +1,6 @@
 import React from "react";
 import "./Hero.css"
 import { motion } from "framer-motion";
-import Button from "../Button/Button";
 import { BsChevronCompactDown } from "react-icons/bs";
 
 

@@ -62,6 +62,7 @@ function Header() {
                         exit={{ y: "100%", opacity: 0 }} 
                         transition={{ duration: 0.5 }}
                         className="toggleNavbar"
+                        onClick={handleCloseNavbar}
                     >
                         <AiOutlineClose
                             className="closeNavbar__button"

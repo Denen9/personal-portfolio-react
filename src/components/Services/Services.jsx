@@ -15,6 +15,7 @@ const Services = ({services}) => {
         style={{
           '--swiper-navigation-color': '#d316c8',
           '--swiper-pagination-color': '#fff',
+       
         }}
         speed={800}
         parallax={true}
@@ -24,7 +25,7 @@ const Services = ({services}) => {
         className="mySwiper"
       >
         {services.map((service, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide className="cuadro" key={index}>
             <div className="title" data-swiper-parallax="-500">
               {service.title}
             </div>

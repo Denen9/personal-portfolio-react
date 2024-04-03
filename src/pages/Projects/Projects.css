@@ -6,16 +6,38 @@
 .projectsCardBox{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     background-color: var(--color-primary);
     position: relative;
     padding: 4rem 8rem;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+    
 }
 
 .projectsCardBox h3{
     color: var(--color-gray);
     font-size: 1.5rem;
     margin-bottom: 4rem;
+}
+
+.projectsFilterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.projectsFilter{
+    padding: 2rem 2rem;
+    border: 2px solid var(--color-active);
+    color: var(--color-gray);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1024px){
@@ -26,6 +48,13 @@
 
 .projectsCardBox{
     padding: 4rem 6rem 2rem 6rem;
+}
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    
 }
 }
 

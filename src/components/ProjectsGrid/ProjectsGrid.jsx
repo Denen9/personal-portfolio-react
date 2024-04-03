@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import "./ProjectsGrid.css"
 import { motion } from "framer-motion";
 import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3 } from 'react-icons/bi'
@@ -6,8 +6,8 @@ import { FiGithub } from 'react-icons/fi'
 import { GoLinkExternal } from 'react-icons/go'
 import { Link } from "react-router-dom";
 
-function ProjectsGrid({projects}){
 
+function ProjectsGrid({projects}){
     
     const [activeProject, setActiveProject] = useState(null);
   
@@ -16,7 +16,9 @@ function ProjectsGrid({projects}){
     };
 
     const limitedProjects = projects.slice(0, 4);
-    console.log(projects[0])
+    
+    
+    
     return (
         <Suspense fallback={<h1>Loading...</h1>}>
         <div className="projectsBox">

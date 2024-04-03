@@ -37,6 +37,7 @@
     font-weight: 200;
   }
   
+
   @media screen and (max-width: 768px){
     .servicesContainer{
         padding: 4rem 0;

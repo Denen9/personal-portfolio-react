@@ -60,7 +60,6 @@
 @media screen and (max-width: 1024px){
     .heroBox{
         padding: 4rem 0 4rem 0;
-        height: 40rem;
        }
        
        .titleBox{
@@ -80,7 +79,6 @@
 @media screen and (max-width: 576px){
     .heroBox{
         padding: 2rem 0 2rem 0;
-        height: 35rem;
        }
        
        .titleBox{

@@ -8,33 +8,7 @@ import { Link } from "react-router-dom";
 
 function Card({ project }) {
     return (
-        <Plx 
-            parallaxData={[
-                {
-                start: 0,
-                end: 700,
-                easing: "ease-in",
-                properties: [
-                    {
-                    startValue: 200,
-                    endValue: 0,
-                    property: "translateY"
-                    },
-                    {
-                        startValue: 0.2,
-                        endValue: 1,
-                        property: "scale"
-                    }
-                ]
-                }
-            ]}
-            style={{
-                position: "relative",
-                left: 0,
-                top: 0,
-                width: "100%",
-            }} 
-        >
+      
         <div className="cardBox">
             <div className="cardImgBox">
                 <img className="cardImg" src={project.image} alt={project.name} />
@@ -59,7 +33,6 @@ function Card({ project }) {
                 
             </div>
         </div>
-        </Plx>
     );
 }
 
