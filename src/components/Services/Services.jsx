@@ -24,6 +24,10 @@ const Services = ({services}) => {
         modules={[Parallax, Pagination, Navigation]}
         className="mySwiper"
       >
+        <SwiperSlide className="cuadro">
+          <div className="title"  data-swiper-parallax="-500">Servicios disponibles para ti</div>
+          <div className="subtitle" data-swiper-parallax="-300">Todos los servicios para que tu página se vea de la mejor manera</div>
+        </SwiperSlide>
         {services.map((service, index) => (
           <SwiperSlide className="cuadro" key={index}>
             <div className="title" data-swiper-parallax="-500">
