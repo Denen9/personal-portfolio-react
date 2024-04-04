@@ -1,8 +1,8 @@
 .contactBannerContainer{
     background-color: #ff20f4;
     opacity: 1;
-    background-size: 80px 80px;
-    background-image:  repeating-linear-gradient(to right, #fb1dff, #fb1dff 4px, #ff20f4 4px, #ff20f4);
+    background-size: 12rem 12rem;
+    background-image:  repeating-linear-gradient(to right, #fc33ff, #fc33ff 4px, #ff33f5 4px, #ff33f5);
     display: flex;
     flex-direction: column;
     padding: 2rem 0 2rem 4rem;
@@ -42,7 +42,9 @@
 
 @media screen and (max-width: 725px){
     .contactBannerContainer{    
-        padding: 2rem 0 2rem 2rem;  
+        padding: 2rem 0 2rem 2rem; 
+        background-size: 6rem 6rem;
+
     }
     
     .contactBannerCall{
