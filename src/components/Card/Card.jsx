@@ -4,10 +4,10 @@ import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3 } from 'react-ic
 import { FiGithub } from 'react-icons/fi';
 import { GoLinkExternal } from 'react-icons/go';
 import { Link } from "react-router-dom";
-import { BsChevronDown } from 'react-icons/bs';
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 
 function Card({ project }) {
-  const [toggleText, setToggleText] = useState(false);
+  const [toggleText, setToggleText] = useState(true);
 
   const handleToggleText = () => {
     setToggleText(!toggleText);
@@ -16,12 +16,12 @@ function Card({ project }) {
   return (
     <div className="cardBox">
       <div className="cardImgBox">
-        <img className="cardImg" src={project.image} alt={project.name} />
+        <Link to={project.url}><img className="cardImg" src={project.image} alt={project.name} /></Link>
       </div>
       <div className="cardInfoBox">
         <div className="cardInfoTitleBox">
           <h4 className="cardInfoTitle">{project.name}</h4>
-          <BsChevronDown className="cardInfoIcon" onClick={handleToggleText} />
+          {toggleText ? <BsChevronDown className="cardInfoIcon" onClick={handleToggleText} /> : <BsChevronUp className="cardInfoIcon" onClick={handleToggleText} />}
         </div>
         {!toggleText && (
           <p className="cardInfoText">{project.text}</p>

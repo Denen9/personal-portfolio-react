@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Projects.css";
-import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
 import Card from "../../components/Card/Card";
-import Plx from "react-plx";
+import ContactBanner from "../../components/ContactBanner/ContactBanner";
 
 function Projects({ projects }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -17,69 +16,39 @@ function Projects({ projects }) {
   return (
     <section className="projectsContainer">
       <div className="gridContainer">
-        <ProjectsGrid projects={projects} />
+        <h1 className="projectsHeroTitle">Showroom</h1>
       </div>
       <div className="projectsCardBox">
-        <Plx
-          parallaxData={[
-            {
-              start: 0,
-              end: 700,
-              easing: "ease-in",
-              properties: [
-                {
-                  startValue: -800,
-                  endValue: 1,
-                  property: "translateX",
-                },
-                {
-                  startValue: 0.2,
-                  endValue: 1,
-                  property: "scale",
-                },
-              ],
-            },
-          ]}
-          style={{
-            position: "relative",
-            left: 0,
-            top: 0,
-            width: "100%",
-          }}
-        >
-          <h3>MIS PROYECTOS</h3>
-        </Plx>
+
+        <div className="projectsCardTitleContainer">
+          <p className="projectsCardTitle">Explora mis Sitios Web.</p>
+        </div>
+
         <div>
           <div className="projectsFilterContainer">
             <div
               className="projectsFilter"
               onClick={() => handleFilterClick(null)}
             >
-              TODOS ({projects.length})
+              Todos ({projects.length})
             </div>
             <div
               className="projectsFilter"
               onClick={() => handleFilterClick("e-commerce")}
             >
-              ECOMMERCE ({countProjectsByCategory("e-commerce")})
+              eCommerce ({countProjectsByCategory("e-commerce")})
             </div>
             <div
               className="projectsFilter"
               onClick={() => handleFilterClick("landing page")}
             >
-              LANDING PAGE ({countProjectsByCategory("landing page")})
+              Landing Page ({countProjectsByCategory("landing page")})
             </div>
             <div
               className="projectsFilter"
-              onClick={() => handleFilterClick("react")}
+              onClick={() => handleFilterClick("portfolio")}
             >
-              REACT ({countProjectsByCategory("react")})
-            </div>
-            <div
-              className="projectsFilter"
-              onClick={() => handleFilterClick("javaScript")}
-            >
-              JAVA SCRIPT ({countProjectsByCategory("javaScript")})
+              Portfolio ({countProjectsByCategory("portfolio")})
             </div>
           </div>
         </div>
@@ -93,7 +62,9 @@ function Projects({ projects }) {
               <Card key={project.id} project={project} />
             ))}
         </div>
+        
       </div>
+      <ContactBanner></ContactBanner>
     </section>
   );
 }

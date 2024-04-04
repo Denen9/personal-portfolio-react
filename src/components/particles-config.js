@@ -1,10 +1,10 @@
-import React from "react"
+
 
 const particlesConfig = (fondoColor)=>{
   return{
   "particles": {
     "number": {
-      "value": 25,
+      "value": 35,
       "density": {
         "enable": true,
         "value_area": 800
