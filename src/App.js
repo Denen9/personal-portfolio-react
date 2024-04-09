@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 import Header from './components/Header/Header';
 import ParticleBackground from './components/ParticleBackground/ParticleBackground';
 import Footer from './components/Footer/Footer';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore'; // Importa deleteDoc y doc
 import { db } from './firebase/config.js';
+import Contact from './pages/Contact/Contact.jsx';
+
+
+export const deleteProject = async (projectId) => {
+  try {
+    await deleteDoc(doc(db, "proyectos", projectId)); // Elimina el documento dentro de la colección "proyectos"
+    console.log('Proyecto eliminado exitosamente');
+  } catch (error) {
+    console.error('Error al eliminar el proyecto:', error);
+  }
+};
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -25,7 +36,7 @@ function App() {
           getDocs(servicesRef)
         ]);
 
-        const projectsData = projectsSnapshot.docs.map(doc => doc.data());
+        const projectsData = projectsSnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })); // Incluye el ID del documento en el objeto
         const servicesData = servicesSnapshot.docs.map(doc => doc.data());
 
         setProjects(projectsData);
@@ -40,6 +51,7 @@ function App() {
     fetchData();
   }, []);
 
+
   return (
     <BrowserRouter>
       <ParticleBackground />
@@ -47,9 +59,10 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home projects={projects} services={services} loading={loading} error={error} />}
+          element={<Home projects={projects} services={services} loading={loading} error={error} deleteProject={deleteProject} />}
         />
         <Route path="/projects" element={<Projects projects={projects} />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>

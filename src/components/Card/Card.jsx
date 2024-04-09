@@ -50,4 +50,3 @@ function Card({ project }) {
 }
 
 export default Card;
-

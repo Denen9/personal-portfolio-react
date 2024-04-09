@@ -1,0 +1,137 @@
+
+
+.container{
+    position: relative;
+    z-index: 100;
+    padding: 6rem 8rem;
+}
+
+.mainTitle {
+    color: var(--color-active);
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.mainSubtitle{
+    color: var(--color-icon);
+    font-size: 3rem;
+    font-weight: 400;
+    text-wrap: balance;
+    line-height: 120%;
+    margin-bottom: 2rem;
+}
+
+.form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    gap: 1rem;
+    width: 40rem;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input::placeholder, .textArea::placeholder{
+    font-size: 1.2rem;
+    color: var(--color-active);
+}
+
+.input, .textArea {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color-active);
+    background: transparent;
+    color: var(--color-gray);
+    font-size: 1.2rem;
+}
+
+.input {
+    padding: 1rem 0;
+}
+
+.textArea {
+    padding: 1rem 0 4rem 0;
+}
+
+.send{
+    margin-top: 8rem;
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        padding: 6rem 6rem;
+    }
+    
+    .mainTitle {
+        font-size: 6rem;
+    }
+    
+    .mainSubtitle{
+        font-size: 3rem;
+    }
+    
+    .form{
+        width: 40rem;
+    }
+    
+    .input::placeholder, .textArea::placeholder{
+        font-size: 1.2rem;
+    }
+    
+    .input, .textArea {
+        font-size: 1.2rem;
+    }
+    
+    .input {
+        padding: 1rem 0;
+    }
+    
+    .textArea {
+        padding: 1rem 0 4rem 0;
+    }
+    
+    .send{
+        margin-top: 8rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        padding: 6rem 4rem;
+    }
+    
+    .mainTitle {
+        font-size: 4rem;
+    }
+    
+    .form{
+        width: 100%;
+    }
+    
+    .input {
+        padding: 1rem 0;
+    }
+    
+    .textArea {
+        padding: 1rem 0 4rem 0;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container{
+        padding: 8rem 2rem;
+    }
+    .mainTitle {
+        font-size: 3rem;
+    }
+
+    .mainSubtitle{
+        font-size: 2rem;
+    }
+    
+}

@@ -23,7 +23,7 @@ function ProjectsGrid({projects}){
         <Suspense fallback={<h1>Loading...</h1>}>
         <div className="projectsBox">
         {limitedProjects.map((project) => (
-            <div className={`box box${project.id}`} key={project.id}>
+            <div className={`box box${project.number}`} key={project.id}>
                 <img
                     src={project.image}
                     alt={project.name}

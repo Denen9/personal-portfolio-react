@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Projects.css";
 import Card from "../../components/Card/Card";
 import ContactBanner from "../../components/ContactBanner/ContactBanner";
+import { motion } from "framer-motion";
 
 function Projects({ projects }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -16,7 +17,13 @@ function Projects({ projects }) {
   return (
     <section className="projectsContainer">
       <div className="gridContainer">
-        <h1 className="projectsHeroTitle">Showroom</h1>
+        <motion.h1 
+          className="projectsHeroTitle"
+          initial={{ opacity: 0, y: -80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          >Showroom
+        </motion.h1>
       </div>
       <div className="projectsCardBox">
 

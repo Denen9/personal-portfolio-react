@@ -43,9 +43,11 @@
 }
 
 .footerIcons {
+    position: relative;
     cursor: pointer;
     font-size: 2rem;
     margin: 0 1rem;
+    color: var(--color-gray);
 }
 
 .footerIcons:hover{

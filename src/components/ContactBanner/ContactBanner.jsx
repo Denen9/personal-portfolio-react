@@ -1,6 +1,8 @@
 import React from 'react'
 import "./ContactBanner.css"
 import { BiRightArrowAlt } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { scrollToTop } from "../../data";
 
 export default function ContactBanner() {
   return (
@@ -8,7 +10,7 @@ export default function ContactBanner() {
         <p className='contactBannerCall'>Solicita una llamada</p>
         <div className='titleContainer'>
             <p className='contactBannerTitle'>Contactame</p>
-            <BiRightArrowAlt className='contactBannerIcon'/>
+            <Link to="/contact" scroll={true}><BiRightArrowAlt className='contactBannerIcon' onClick={scrollToTop}/></Link>
         </div>
        
     </section>

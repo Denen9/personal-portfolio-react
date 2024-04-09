@@ -2,14 +2,9 @@ import React from "react";
 import "./Hero.css";
 import { motion } from "framer-motion";
 import { BsChevronCompactDown } from "react-icons/bs";
+import { scrollDown } from "../../data";
 
 function Hero() {
-  const scrollDown = () => {
-    window.scrollTo({
-      top: window.scrollY + 600, // Suma 600px a la posición actual de desplazamiento
-      behavior: "smooth" // Desplazamiento suave
-    });
-  };
 
   return (
     <section className="heroBox">
