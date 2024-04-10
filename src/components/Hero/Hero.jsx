@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css";
+import { motion } from "framer-motion";
 import { BsChevronCompactDown } from "react-icons/bs";
 import { scrollDown } from "../../data";
 
@@ -7,7 +8,7 @@ function Hero() {
 
   return (
     <section className="heroBox">
-      <div>
+      <div className="titleBox">
         <span className="titleOne">¡Hola! Soy <span className="titleOneDenen">DENEN,</span></span>
         <span className="titleTwo"> FRONT END DEVELOPER</span>
       </div>
