@@ -27,7 +27,7 @@
     flex-direction: column;
     z-index: 100;
     gap: 1rem;
-    width: 40rem;
+    width: 50rem;
 }
 
 .inputBox{
@@ -61,6 +61,25 @@
 .send{
     margin-top: 8rem;
 }
+
+.errorSend, .successSend{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.successSend{
+    color: var(--color-active);
+}
+.errorSend {
+    color: #7e0000;
+}
+
+.successIcon {
+    margin-left: 0.5rem;
+}
+
 
 @media screen and (max-width: 1024px){
     .container{

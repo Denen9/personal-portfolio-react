@@ -34,6 +34,11 @@
     font-weight: 500;
     transition: transform 0.2s;
     cursor: pointer;
+    color: var(--color-black)
+}
+
+.link{
+    color: var(--color-black);
 }
 
 .contactBannerIcon:hover{

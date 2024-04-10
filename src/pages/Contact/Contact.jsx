@@ -5,16 +5,22 @@ import { db } from "../../firebase/config";
 import { collection, addDoc } from 'firebase/firestore';
 import { motion } from "framer-motion";
 import Button from "../../components/Button/Button";
+import { MdOutlineErrorOutline } from "react-icons/md";
+import { FaRegCheckCircle } from "react-icons/fa";
+
+
 
 const Contact = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false)
 
   const enviar = async (data) => {
     try {
       const projectsRef = collection(db, 'contacto');
       await addDoc(projectsRef, { ...data });
-      console.log('Datos agregados correctamente a Firebase');
+      setSuccess(true);
+      reset();
     } catch (error) {
       console.error('Error al agregar los datos a Firebase:', error);
       setError(error.message);
@@ -80,8 +86,11 @@ const Contact = () => {
         </div>
 
         <Button className="send" type="submit">ENVIAR</Button>
+        {error && <p className="errorSend">Error: {error}<MdOutlineErrorOutline className="errorIcon"/></p>}
+        {success && <p className="successSend">¡Mensaje enviado con éxito!<FaRegCheckCircle className="successIcon"/></p>}
       </form>
-      {error && <p>Error: {error}</p>}
+     
+
     </div>
   );
 }

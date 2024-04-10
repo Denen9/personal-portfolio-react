@@ -4,7 +4,6 @@
  justify-content: center;
  align-items: center;
  padding: 10rem 0 4rem 0;
- height: 100vh;
 }
 
 .titleBox{
@@ -60,10 +59,6 @@
     }
 }
 
-
-
-
-
 @media screen and (max-width: 1024px){
     .heroBox{
         padding: 4rem 0 4rem 0;
@@ -91,6 +86,7 @@
 @media screen and (max-width: 576px){
     .heroBox{
         padding: 2rem 0 2rem 0;
+        height: 100vh;
        }
        
        .titleBox{

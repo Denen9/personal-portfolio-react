@@ -13,8 +13,8 @@ function ProjectsSection({projects}) {
   return (
     <section className="projectsSection">
         <div className="projectsHeader">
-            <h3 className="projectsTitle">MIS PROYECTOS</h3>
-            <Link to="/projects" className="projectsLink" onClick={scrollToTop}>Ver proyectos</Link>
+            <h3 className="projectsTitle">Proyectos destacados.</h3>
+            <Link to="/projects" className="projectsLink" onClick={scrollToTop}>Ver todos</Link>
         </div>
         <ProjectsGrid projects={projects}/>
     </section>
