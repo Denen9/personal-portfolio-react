@@ -51,6 +51,7 @@ function App() {
     fetchData();
   }, []);
 
+  console.log(projects)
 
   return (
     <BrowserRouter>

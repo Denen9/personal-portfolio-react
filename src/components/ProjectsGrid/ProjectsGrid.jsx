@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import "./ProjectsGrid.css"
 import { motion } from "framer-motion";
 import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3 } from 'react-icons/bi'
@@ -20,7 +20,6 @@ function ProjectsGrid({projects}){
     
     
     return (
-        <Suspense fallback={<h1>Loading...</h1>}>
         <div className="projectsBox">
         {limitedProjects.map((project) => (
             <div className={`box box${project.number}`} key={project.id}>
@@ -61,7 +60,6 @@ function ProjectsGrid({projects}){
     ))}
 
     </div>
-    </Suspense>
     )
 }
 

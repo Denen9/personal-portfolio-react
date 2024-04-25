@@ -7,24 +7,32 @@ import { motion } from "framer-motion";
 import Button from "../../components/Button/Button";
 import { MdOutlineErrorOutline } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
-
-
+import Loader from "../../components/Loader/Loader";
 
 const Contact = () => {
   const { register, handleSubmit, reset } = useForm();
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false); 
 
   const enviar = async (data) => {
+    setLoading(true); 
     try {
       const projectsRef = collection(db, 'contacto');
       await addDoc(projectsRef, { ...data });
       setSuccess(true);
       reset();
+      setTimeout(() => {
+        setSuccess(false);
+      }, 3000);
     } catch (error) {
       console.error('Error al agregar los datos a Firebase:', error);
       setError(error.message);
+      setTimeout(() => {
+        setError(null);
+      }, 3000);
     }
+    setLoading(false);
   };
 
   return (
@@ -41,7 +49,7 @@ const Contact = () => {
         initial={{ opacity: 0, x: 80 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9 }}
-        >Solicita una llamada, descubre todos mis sevicios.
+        >Solicita una llamada, descubre todos mis servicios.
       </motion.h4>
       <form className="form" onSubmit={handleSubmit(enviar)}>
 
@@ -85,12 +93,11 @@ const Contact = () => {
           />
         </div>
 
-        <Button className="send" type="submit">ENVIAR</Button>
+        <Button className="send" type="submit" disabled={loading}>ENVIAR</Button>
+        {loading && <div className="loaderContainer"><Loader /></div>} 
         {error && <p className="errorSend">Error: {error}<MdOutlineErrorOutline className="errorIcon"/></p>}
         {success && <p className="successSend">¡Mensaje enviado con éxito!<FaRegCheckCircle className="successIcon"/></p>}
       </form>
-     
-
     </div>
   );
 }

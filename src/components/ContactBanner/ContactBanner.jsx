@@ -10,7 +10,7 @@ export default function ContactBanner() {
         <p className='contactBannerCall'>Solicita una llamada</p>
         <div className='titleContainer'>
             <p className='contactBannerTitle'>Contactame</p>
-            <Link to="/contact" scroll={true} className='link'><BiRightArrowAlt className='contactBannerIcon' onClick={scrollToTop}/></Link>
+            <Link to="/contact" scroll="true" className='link'><BiRightArrowAlt className='contactBannerIcon' onClick={scrollToTop}/></Link>
         </div>
        
     </section>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Hero.css";
-import { motion } from "framer-motion";
 import { BsChevronCompactDown } from "react-icons/bs";
 import { scrollDown } from "../../data";
 

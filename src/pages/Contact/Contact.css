@@ -70,7 +70,7 @@
     font-size: 1.2rem;
 }
 .successSend{
-    color: var(--color-active);
+    color: var(--color-gray);
 }
 .errorSend {
     color: #7e0000;
@@ -78,6 +78,15 @@
 
 .successIcon {
     margin-left: 0.5rem;
+    color: var(--color-active);
+}
+
+
+.loaderContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
